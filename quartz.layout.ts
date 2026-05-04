@@ -8,8 +8,10 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "Youtube": "https://youtube.com/@dseti",
+      "Email": "daniel@dseti.org",
+      "Donations": "https://www.paypal.com/donate/?hosted_button_id=SWWZZS8NUKDHW",
+      "Schedule a call": "https://calendar.app.google/njNKLqAnvtLrqn5A9"
     },
   }),
 }
@@ -21,6 +23,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+    // Component.CoverImage(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -38,7 +41,21 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+  title: "",
+  folderClickBehavior: "collapse",
+  folderDefaultState: "open",
+  useSavedState: true,
+  // ADD THIS FILTER SECTION BELOW:
+  filter: (node) => {
+    // List the names of folders or the specific slugs you want to hide
+    const omit = ["tags", "Tags", "templates", "private"]
+    
+    // This will hide the folder named "tags" and everything inside it 
+    // from the sidebar tree
+    return !omit.includes(node.name)
+  },
+}),
   ],
   right: [
     Component.Graph(),
@@ -64,5 +81,9 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.Graph(),
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
+  ],
 }

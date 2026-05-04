@@ -1,3 +1,32 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// 1. Increase the Base Font Size for the entire site
+:root {
+  --body-font-size: 1.25rem; // Adjust this to 1.2rem if you want it even larger
+}
+
+// 2. Target the Reading Column (The 'Center' component)
+.center {
+  max-width: 700px;      // The "Sweet Spot" for reading width
+  margin: 0 auto;        // Keeps the column centered
+  font-size: 1.15rem;    // Ensures the content itself is large
+  line-height: 1.85;      // Increases vertical space between lines for clarity
+  
+  // 3. Make sure headers scale up with the body
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+}
+
+// 4. Responsive adjustment: Ensure it looks good on mobile
+@media all and (max-width: 900px) {
+  .center {
+    max-width: 95%;      // Gives a little breathing room on phone screens
+    padding: 0 1rem;
+  }
+}
+
+.explorer-toggle {
+  display: none!important; // Hide the explorer toggle button on mobile
+}

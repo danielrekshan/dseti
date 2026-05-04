@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "D-SETI Dreamwork",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -19,39 +19,39 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
-      },
-      colors: {
-        lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
-        },
-        darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
-        },
-      },
+theme: {
+  fontOrigin: "googleFonts",
+  cdnCaching: true,
+  typography: {
+    header: "Lexend",      // Designed specifically for high readability
+    body: "Inter",         // Exceptionally clean and legible on all screens
+    code: "JetBrains Mono", // Slightly taller x-height for easier code reading
+  },
+  colors: {
+    lightMode: {
+      light: "#fdfdfc",       // Softer off-white to reduce eye strain (paper-like)
+      lightgray: "#e0e0e0",   // Subtle borders
+      gray: "#7a7a7a",        // Meta info (dates, tags)
+      darkgray: "#2d2d2d",    // High-contrast body text (not pure black)
+      dark: "#1a1a1a",        // Headers and bold text
+      secondary: "#0056b3",   // Clear, accessible blue for links
+      tertiary: "#5c7c8a",    // Accents
+      highlight: "rgba(0, 86, 179, 0.07)", // Soft blue tint for block highlights
+      textHighlight: "#fff23688",
     },
+    darkMode: {
+      light: "#161617",       // Deep charcoal, easier on eyes than pure black
+      lightgray: "#2a2a2e",   // Borders
+      gray: "#909090",        // Meta info
+      darkgray: "#e0e0e0",    // Soft white body text
+      dark: "#ffffff",        // Crisp white headers
+      secondary: "#7aa2f7",   // High-legibility blue for dark mode
+      tertiary: "#89ddff",    // Accents
+      highlight: "rgba(122, 162, 247, 0.15)",
+      textHighlight: "#b3aa0288",
+    },
+  },
+},
   },
   plugins: {
     transformers: [
