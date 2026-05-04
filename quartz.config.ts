@@ -16,9 +16,10 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "dseti.org",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
+    outputDir: "public",
 theme: {
   fontOrigin: "googleFonts",
   cdnCaching: true,
