@@ -10,3 +10,6 @@ D-SETI for me is now a spiritual practice involving academic discipline and inte
 I've explored using AI with my websites and content production.  I believe it is a powerful tool, but should not take the place of an authentic voice.  I now see that authentic human voices, which are messy and are way more than just sources for marketing copy, are needed now more than ever.  I have written all my books by hand and am writing my scripts and copy without the intervention of an LLM.  I experimented with AI in content production for D-SETI and it looks slick, but doesn't perform as well. 
 
 Of course, I will use AI for research, coding, and a variety of tasks, but I want you to know what to expect here.  Feel free to email me if you have a question about my work or use of AI.
+
+
+MORE TESTS
